@@ -87,12 +87,12 @@ main {
   flex-wrap: wrap;
 }
 
-main aside {
+aside {
+  text-align: right;
   flex: 0;
   padding: 0px 1%;
   align-content: center;
-  /* text-align: Right; */
-  width: fit-content;
+
 }
 
 #about {
@@ -105,6 +105,7 @@ main aside {
   word-break: break-all;
   white-space: normal;
   text-align: left;
+  font-size: 20px;
 
 }
 
@@ -117,10 +118,8 @@ main aside {
 }
 
 h2 {
-  margin: 25% 0;
   font-size: 250%;
-  
-
+  text-align: right;
 }
 
 h3 {
@@ -131,17 +130,16 @@ h3 {
 }
 
 h4 {
-  padding-left: 267px;
+  padding-left: 230px;
   font-size: 250%;
-  text-align: left;
+  text-align: right;
 
 }
 
 h5 {
   display: flex;
-  font-size: 250%;
-  background-color: #000000;
-  text-align: left;
+
+
 }
 
 h6 {
@@ -156,100 +154,176 @@ h6 {
 img {
   flex-basis: 35%;
   border-radius: 15px;
-  width: 400px;
   padding: 6%;
+  width: 400px;
 }
 
 .workgrid {
   display: grid;
-  justify-content: space-around;
-  gap: 30px;
-
-  /* flex-wrap:wrap; */
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
 
   .boxes {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
     margin-left: 10px;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     gap: 40px;
+    
   }
 
+  .boxes::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.3s;
+    pointer-events: none;
+  }
+  
+  .boxes::after:hover:after {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+.text {
+  background-color: #000000;
+  background-clip: content-box;
+  text-align: left;
+  align-self: self-end;
+  margin: 0;
+  font-size: 250%;
+  padding-top: 10px;
+  color: #ff0000;
+  pointer-events: none;
 }
 
 .nonprofit {
+  display: flex;
+  position: relative;
+  overflow: hidden;
   margin: 10px;
   width: 900px;
   height: 300px;
   font-weight: 700;
   font-size: x-large;
   color: #ffffff;
-  text-align: left border-radius: 20px;
+  border-radius: 40px;
   background-image: url(https://images.pexels.com/photos/45842/clasped-hands-comfort-hands-people-45842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-position: center;
-
+  background-size: cover;
+  transition: filter 0.3s;
 }
 
+.nonprofit:hover {
+  filter: brightness(1.5);
+}
+
+
+
 .gaming {
+  display: flex;
   height: 300px;
   width: 500px;
-  width: ;
   font-weight: 700;
   font-size: x-large;
   vertical-align: bottom;
   color: #ffffff;
-  text-align: end;
   border-radius: 10px;
   background-image: url(https://images.pexels.com/photos/159393/gamepad-video-game-controller-game-controller-controller-159393.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-position: top;
+  transition: filter 0.3s;
+
 }
+
+.gaming:hover {
+filter: brightness(1.5);
+}
+
+
 
 .calculator {
+  display: flex;
   height: 300px;
   width: 500px;
   font-weight: 700;
   font-size: x-large;
   vertical-align: bottom;
   color: #ffffff;
-  text-align: end;
   border-radius: 10px;
   background-image: url(https://images.pexels.com/photos/6927360/pexels-photo-6927360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-  /* background-position: center; */
+  background-position: center;
+  transition: filter 0.3s;
 }
 
+.calculator:hover {
+  filter: brightness(1.5);
+  }
+
 .puzzles {
+  display: flex;
   height: 300px;
   width: 500px;
   font-weight: 700;
   font-size: x-large;
   vertical-align: bottom;
   color: #ffffff;
-  text-align: end;
   border-radius: 10px;
   background-image: url(https://images.pexels.com/photos/5505122/pexels-photo-5505122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-position: center;
+  transition: filter 0.3s;
 }
 
+.puzzles:hover {
+  filter: brightness(1.5);
+  }
+
 .data {
+  display: flex;
   height: 300px;
   width: 500px;
   font-weight: 700;
   font-size: x-large;
   vertical-align: bottom;
   color: #ffffff;
-  text-align: end;
   border-radius: 10px;
   background-image: url(https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-position: left;
+  transition: filter 0.3s;
 }
 
+.data:hover {
+  filter: brightness(1.5);
+  }
 
 .info {
+  display: flex;
+  color: #ff0000;
+  font-weight: bold;
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.info:hover::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background: red;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
   /* justify-content: left;
     min-width: 500px;
     font-size: 20px;
@@ -262,4 +336,17 @@ footer {
   /* justify-content: right;
     padding: 2%; */
   color: #fff;
+  list-style: none;
+}
+
+footer a {
+  font-size: 30px;
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+  top: 150px;
+
+}
+
+footer a:hover::after {
+  text-decoration: underline;
 }
