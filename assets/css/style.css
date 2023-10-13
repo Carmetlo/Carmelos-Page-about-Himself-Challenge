@@ -151,6 +151,7 @@ ul {
 
   .work-grid {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   
@@ -188,8 +189,7 @@ ul {
     display: flex;
     position: relative;
     overflow: hidden;
-    margin: 10px;
-    width: 900px;
+    width: 75%;
     height: 300px;
     font-weight: 700;
     font-size: x-large;
@@ -208,7 +208,7 @@ ul {
   .gaming {
     display: flex;
     height: 300px;
-    width: 500px;
+    width: 50%;
     font-weight: 700;
     font-size: x-large;
     vertical-align: bottom;
@@ -226,7 +226,7 @@ ul {
   .calculator {
     display: flex;
     height: 300px;
-    width: 500px;
+    width: 50%;
     font-weight: 700;
     font-size: x-large;
     vertical-align: bottom;
@@ -244,7 +244,7 @@ ul {
   .puzzles {
     display: flex;
     height: 300px;
-    width: 500px;
+    width: 50%;
     font-weight: 700;
     font-size: x-large;
     vertical-align: bottom;
@@ -262,7 +262,7 @@ ul {
   .data {
     display: flex;
     height: 300px;
-    width: 500px;
+    width: 50%;
     font-weight: 700;
     font-size: x-large;
     vertical-align: bottom;
