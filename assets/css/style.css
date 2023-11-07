@@ -185,6 +185,8 @@ ul {
     pointer-events: none;
   }
   
+
+  
   .nonprofit {
     display: flex;
     position: relative;
@@ -205,6 +207,23 @@ ul {
     filter: brightness(1.5);
   }
   
+  .nonprofit a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    text-indent: -9999px;
+    background: transparent;
+    display: block;
+  }
+  
+  /* Hidden anchor tag */
+  .nonprofit a:focus {
+    display: none;
+    visibility: hidden;
+  }
   .gaming {
     display: flex;
     height: 300px;
